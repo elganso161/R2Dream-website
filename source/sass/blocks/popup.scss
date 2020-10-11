@@ -1,0 +1,200 @@
+.popup-user__button {
+  display: block;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+
+  width: 169px;
+  height: 34px;
+
+  background: #438bff;
+  border-radius: 2px;
+}
+
+.popup-button {
+  width: 380px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.authorization-popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 26px rgba(224, 211, 211, 0.15);
+  display: none;
+}
+
+.registration {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 380px;
+  margin: 0 auto;
+}
+
+.close-popup {
+  cursor: pointer;
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.close-popup:hover {
+  animation: close-popup 2s infinite;
+}
+
+
+@keyframes close-popup {
+  50% {
+    transform: rotate(180deg);
+  }
+}
+
+
+.download-popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 26px rgba(224, 211, 211, 0.15);
+  display: none;
+}
+
+.download-game {
+  width: 780px;
+  height: 410px;
+  margin: 0 auto;
+  background: #101726;
+  box-shadow: 0px 4px 26px rgba(224, 211, 211, 0.15);
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.download-game__close {
+  width: 100%;
+  height: 28px;
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.download-game__title {
+  display: block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #ffffff;
+  width: 100%;
+  height: 28px;
+}
+
+.download-game__left {
+  width: 50%;
+  margin: 0 auto;
+  border-right: 1px solid #1e2d4e;
+}
+
+.download-game__left-title {
+  width: 108px;
+  height: 21px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  margin-bottom: 7px;
+}
+
+.download-game__left-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #7a8a9a;
+
+  width: 345px;
+  height: 48px;
+}
+
+.download-game__rigth {
+  width: 50%;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+
+.download-game__rigth-title {
+  width: 108px;
+  height: 21px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  margin-bottom: 7px;
+}
+
+.download-game__rigth-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #7a8a9a;
+
+  width: 345px;
+  height: 48px;
+}
+
+.download__list {
+  list-style: none;
+  padding: 0;
+}
+
+.download__list a {
+  text-decoration: none;
+  display: block;
+  width: 290px;
+  height: 58px;
+  left: 25px;
+  top: 208px;
+
+  background: linear-gradient(90deg, #00c6fb 0%, #005bea 100%);
+  border-radius: 2px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.download__list a:hover {
+  background: linear-gradient(90deg, #2b72e6 100%, #00c6fb 0%);
+}

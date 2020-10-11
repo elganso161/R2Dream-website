@@ -1,0 +1,67 @@
+.news {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 920px;
+  margin: 0 auto;
+  margin-bottom: 26px;
+}
+
+.news__title {
+  font-family: BeaufortforLOL-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 46px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.news__title span {
+  color: yellow;
+}
+
+.news__title-link {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #438bff;
+}
+
+.news__title-link:hover span {
+  margin-left: 5px;
+  transition: 0.2s;
+}
+
+.all-news {
+  border: 1px solid #438bff;
+  padding: 8px 28px;
+  border-radius: 20px;
+}
+
+.all-news:hover {
+  background-color: #438bff;
+  color: #fff;
+  transition: 0.2s;
+}
+
+// @media (max-width: 920px) {
+//   .news {
+//     display: block;
+//     margin: 0 auto;
+//   }
+
+//   .news__title {
+//     text-align: center;
+//     margin: 0 auto;
+//     width: 300px;
+//   }
+
+//   .news__title-link {
+//     display: none;
+//   }
+// }

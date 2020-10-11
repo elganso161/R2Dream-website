@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <link
+      href="//db.onlinewebfonts.com/c/12420e8c141ca7c3dff41de2d59df13e?family=BeaufortforLOL-Bold"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="js/google-translate.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+    <title>R2Dreams-website</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__block">
+          <div class="header__logo">
+            <img
+              class="header__logo-img"
+              src="./img/R2Dream-logo.png"
+              alt="Логотип"
+            />
+          </div>
+          <div class="navigation__lang lang notranslate">
+            <div class="lang__link lang__link_select" data-lang-active>
+              <img
+                class="lang__img lang__img_select"
+                src="./img/lang__ru.png"
+                alt="Ru"
+              />
+              <div class="lang__arrow"></div>
+            </div>
+            <div class="lang__list" data-lang-list>
+              <a
+                href="javascript:void(0)"
+                data-google-lang="ru"
+                class="lang__link lang__link_sub lang__link_translate"
+              >
+                <img class="lang__img" src="img/lang__ru.png" alt="Ru" />
+              </a>
+              <a
+                href="javascript:void(0)"
+                data-google-lang="en"
+                class="lang__link lang__link_sub lang__link_translate"
+              >
+                <img class="lang__img" src="img/lang__en.png" alt="En" />
+              </a>
+              <a
+                href="javascript:void(0)"
+                data-google-lang="zh-CN"
+                class="lang__link lang__link_sub lang__link_translate"
+              >
+                <img class="lang__img" src="img/lang__ch.png" alt="Zh" />
+              </a>
+            </div>
+          </div>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a class="nav__list-link nav__link-active" href="#">Главная</a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="#">Скачать игру</a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="./registration.html"
+                  >Регистрация</a
+                >
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="#">Форум</a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="./statistics.html"
+                  >Статистика</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="profile">
+            <ul class="profile__list">
+              <li class="profile__list-item">
+                <p onclick="openProfile()">Профиль</p>
+                <ul class="sub-profile__list">
+                  <li class="sub-profile__list-item">
+                    Добро пожаловать, <span>Test</span>!
+                  </li>
+                  <li class="sub-profile__list-item">
+                    <a href="#">
+                      Личный кабинет (скоро) <span> &#8594; </span></a
+                    >
+                  </li>
+                  <li class="sub-profile__list-item">
+                    <a href="#">Пополнить баланс <span> &#8594; </span></a>
+                  </li>
+                  <li class="sub-profile__list-item" onclick="openPopUp()">
+                    <a href="#">Войти <span> &#8594; </span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- modile -->
+      <div class="mobile-menu">
+    <input type="checkbox" id="checkbox" class="mobile-menu__checkbox">
+    <label for="checkbox" class="mobile-menu__btn"><div class="mobile-menu__icon"></div></label>
+    <div class="mobile-menu__container">
+    <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link">Главная</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Скачать игру</a></li>
+        <li class="mobile-menu__item"><a href="./registration.html" class="mobile-menu__link">Регистрация</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Форум</a></li>
+        <li class="mobile-menu__item"><a href="./statistics.html" class="mobile-menu__link">Статистика</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Профиль</a></li>
+    </ul>
+    </div>
+</div>
+      <!-- end__mobile -->
+    </header>
+    <main>
+      <section class="section-slider">
+        <h2 class="visually-hidden">Секция слайдер</h2>
+        <div class="container">
+          <div class="slider" id="slider">
+            <a href="#" class="slider__next control_next">></a>
+            <a href="#" class="slider__prev control_prev"><</a>
+            <ul class="slider__list">
+              <li class="slider__list-item slider-1">
+                <p class="slider__suptitle">Открытие 26 сентябя</p>
+                <h2 class="slider__title">
+                  R2 Dream <span>x30</span> в 20:00 по мск
+                </h2>
+                <p class="slider__subtitle">
+                  Лучший mid-rate сервер, не пропусти открытие !
+                </p>
+                <a target="blank" href="#">
+                  Читать описание <span> &#8594; </span>
+                </a>
+              </li>
+              <li class="slider__list-item slider-2">
+                <p class="slider__suptitle">Открытие 26 сентябя</p>
+                <h2 class="slider__title">
+                  R2 Dream <span>x5</span> в 20:00 по мск
+                </h2>
+                <p class="slider__subtitle">
+                  Лучший mid-rate сервер, не пропусти открытие !
+                </p>
+                <a target="blank" href="#">
+                  Читать описание <span> &#8594; </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section-button">
+        <h2 class="visually-hidden">Секция кнопок</h2>
+        <div class="container">
+          <div class="button">
+            <ul class="button__list">
+              <li class="button__list-item">
+                <a class="button__link" href="#" onclick="downloadGame()">
+                  <p class="download">Скачать игру</p>
+                </a>
+              </li>
+              <li>
+                <a class="button__link" href="#">
+                  <p class="creat">Создать аккаунт</p></a
+                >
+              </li>
+              <li>
+                <a class="button__link" href="./donat.html">
+                  <p class="donate">Пожертвования</p></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section-news">
+        <h2 class="visually-hidden">Секция новостей</h2>
+        <div class="container">
+          <div class="news">
+            <div>
+              <h3 class="news__title">R2 DREAM <span>X30</span></h3>
+              <a class="news__title-link" href="#"
+                >Последние новости
+                <span> &#8594; </span>
+              </a>
+            </div>
+            <div>
+              <a class="news__title-link all-news" href="#"> Все новости </a>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="cards">
+            <ul class="cards__list">
+              <li class="cards__list-item card-1">
+                <h4>Последнее обновление DREAM X30</h4>
+                <p>
+                  Уже готовится к выходу последний апдейт на сервере, на форуме
+                  можете ...
+                </p>
+                <a href="#" target="blank"
+                  >Читать подробнее <span> &#8594; </span></a
+                >
+              </li>
+              <li class="cards__list-item card-2">
+                <h4>Технические работы на сервере</h4>
+                <p>
+                  31 Августа в 11:00 будут проводиться плановые технические
+                  работы. Продл ...
+                </p>
+                <a href="#" target="blank"
+                  >Читать подробнее <span> &#8594; </span></a
+                >
+              </li>
+              <li class="cards__list-item card-3">
+                <h4>НАГРАДА ЗА ГОЛОСОВАНИЕ В РЕЙТИ ...</h4>
+                <p>
+                  Уважаемые игроки ! У нас для вас подготовлена специальная
+                  акция в ра ...
+                </p>
+                <a href="#" target="blank"
+                  >Читать подробнее <span> &#8594; </span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section-servers">
+        <h3 class="visually-hidden">Сукция серверов</h3>
+        <div class="container">
+          <div class="servers">
+            <div class="servers__left">
+              <div style="margin-bottom: 29px">
+                <h3 class="servers__title">Наши сервера</h3>
+                <a class="servers-link" href="#" target="blank"
+                  >Перейти к описанию <span> &#8594; </span></a
+                >
+              </div>
+              <div class="servers__block servers__block-one">
+                <p class="servers__block-title">X30</p>
+                <ul class="servers__block-list">
+                  <li><p>- Опыт х30</p></li>
+                  <li><p>- Дроп х60</p></li>
+                  <li><p>- Счетчик квестов х5</p></li>
+                  <li><p>- Серебро х1</p></li>
+                </ul>
+                <a href="#"> Подробнее <span> &#8594; </span></a>
+              </div>
+              <div class="servers__block servers__block-two">
+                <p class="servers__block-title">X5</p>
+                <ul class="servers__block-list">
+                  <li><p>- Опыт х5</p></li>
+                  <li><p>- Дроп х15</p></li>
+                  <li><p>- Счетчик квестов х2</p></li>
+                  <li><p>- Серебро х1</p></li>
+                </ul>
+                <a href="#"> Подробнее <span> &#8594; </span></a>
+              </div>
+            </div>
+            <div class="servers__right">
+              <div class="servers__right-block">
+                <h3 class="servers__title">Лучшие игроки</h3>
+                <a class="servers-link" href="#" target="blank"
+                  >Перейти к статистике <span> &#8594; </span></a
+                >
+              </div>
+              <table class="table servers__x30 slide-1">
+                <tr>
+                  <th>Место</th>
+                  <th>Игрок</th>
+                  <th>Класс</th>
+                  <th>Побед</th>
+                </tr>
+                <tr class="top">
+                  <td>1</td>
+                  <td>Bender</td>
+                  <td>Рыцарь</td>
+                  <td>2758</td>
+                </tr>
+                <tr class="top">
+                  <td>2</td>
+                  <td>Lavrentiy</td>
+                  <td>Маг</td>
+                  <td>2412</td>
+                </tr>
+                <tr class="top">
+                  <td>3</td>
+                  <td>VasillyVasi</td>
+                  <td>Ассасин</td>
+                  <td>2356</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Testy</td>
+                  <td>Рейнджер</td>
+                  <td>1998</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Bor</td>
+                  <td>Маг</td>
+                  <td>1998</td>
+                </tr>
+              </table>
+              <table class="table servers__x5 slide-2 slide-none">
+                <tr>
+                  <th>Место</th>
+                  <th>Игрок</th>
+                  <th>Класс</th>
+                  <th>Побед</th>
+                </tr>
+                <tr class="top">
+                  <td>1</td>
+                  <td>Bender</td>
+                  <td>Маг</td>
+                  <td>930</td>
+                </tr>
+                <tr class="top">
+                  <td>2</td>
+                  <td>Lavrentiy</td>
+                  <td>Рыцарь</td>
+                  <td>850</td>
+                </tr>
+                <tr class="top">
+                  <td>3</td>
+                  <td>VasillyVasi</td>
+                  <td>Рейнджер</td>
+                  <td>800</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Testy</td>
+                  <td>Ассасин</td>
+                  <td>600</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Bor</td>
+                  <td>Маг</td>
+                  <td>500</td>
+                </tr>
+              </table>
+              <div class="btn-block">
+                <button onclick="on1()" class="btn btn-1 btn-active">
+                  х30
+                </button>
+                <button onclick="on2()" class="btn btn-2">х5</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-social">
+        <h3 class="visually-hidden">Секция соц. Сетей</h3>
+        <div class="container">
+          <div class="social">
+            <h4 class="social__title">Подпишись на нас !</h4>
+            <p class="social__subtitle">Розыгрыши и акции в социальных сетях</p>
+            <ul class="social__links">
+              <li><a class="social__links-discord" href="#">DISCORD</a></li>
+              <li><a class="social__links-vk" href="#">Вконтакте</a></li>
+              <li><a class="social__links-facebook" href="#">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-flex">
+          <div class="footer__social">
+            <img src="./img/footer-logo.png" alt="Логотип" />
+            <ul class="footer__social-list">
+              <li>
+                <a
+                  class="footer__social-list-item footer-discord"
+                  href="#"
+                  target="blank"
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="footer__social-list-item footer-vk"
+                  href="#"
+                  target="blank"
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="footer__social-list-item footer-facebook"
+                  href="#"
+                  target="blank"
+                  href="#"
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="footer__social-list-item footer-instagram"
+                  href="#"
+                  target="blank"
+                  href="#"
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__description">
+            <ul class="footer__description-list">
+              <li><p>О проекте</p></li>
+              <li class="footer__description-list-item">
+                <a href="#">Описание х35</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Описание х5</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Файлы</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Регистрация</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__info">
+            <ul class="footer__info-list">
+              <li><p>Информация</p></li>
+              <li class="footer__description-list-item">
+                <a href="#">Личный кабинет</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Форум</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Статистика</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Пожертвование</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__help">
+            <ul class="footer__help-list">
+              <li><p>Полезное</p></li>
+              <li class="footer__description-list-item">
+                <a href="#">Поддержка</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Новости</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Как подключится</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__block">
+            <ul class="footer__block-list">
+              <li>
+                <a href="#" target="blank"
+                  ><img src="http://placehold.it/88x31" alt="img"
+                /></a>
+              </li>
+              <li>
+                <a href="#" target="blank"
+                  ><img src="http://placehold.it/88x31" alt="img"
+                /></a>
+              </li>
+              <li>
+                <a href="#" target="blank"
+                  ><img src="http://placehold.it/88x31" alt="img"
+                /></a>
+              </li>
+              <li>
+                <a href="#" target="blank"
+                  ><img src="http://placehold.it/88x31" alt="img"
+                /></a>
+              </li>
+              <li><a class="upnova" href="#" target="blank">Designed by</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-bottom">
+          © R2Dream 2020 Данный сервер является тестовым вариантом игры и
+          предназначен только для ознакомления игроков.
+        </p>
+      </div>
+    </footer>
+
+    <!-- POPUP -->
+    <div class="authorization-popup">
+      <div class="container">
+        <form class="registration-form" action="" method="POST">
+          <div class="registration">
+            <h3 class="registration__title">Авторизация на сайте</h3>
+            <img
+              class="close-popup"
+              src="./img/close.png"
+              alt="close"
+              onclick="closePopup()"
+            />
+          </div>
+          <div class="user__mail">
+            <label for="mail">E-Mail</label>
+            <input
+              type="email"
+              id="mail"
+              name="user_mail"
+              placeholder="Укажите ваш E Mail"
+            />
+          </div>
+          <div class="user__password">
+            <label for="password">Пароль</label>
+            <input
+              type="password"
+              id="password"
+              name="user_password"
+              placeholder="Введите 12-и значный пароль"
+            />
+          </div>
+
+          <div class="user__captcha">
+            <label for="captcha">Введите капчу</label>
+            <input type="text" id="captcha" />
+            <img
+              class="user__captcha-img"
+              src="./img/captcha.png"
+              alt="captcha"
+            />
+          </div>
+          <div class="popup-button">
+            <button class="popup-user__button" type="submit">Войти</button>
+            <a href="#">Забыли пароль?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="download-popup">
+      <div class="container">
+        <div class="download-game">
+          <div class="download-game__close">
+            <h3 class="download-game__title">Скачать файлы</h3>
+            <img
+              class="close-popup"
+              src="./img/close.png"
+              alt="close"
+              onclick="closeDownload()"
+            />
+          </div>
+          <div class="download-game__left">
+            <h4 class="download-game__left-title">Клиент игры</h4>
+            <p class="download-game__left-text">
+              Если у вас нет клиента игры - скачайте и установите его. Здесь
+              преставлена последняя версия игрового клиента.
+            </p>
+            <ul class="download__list">
+              <li><a href="#" download="">Скачать клиент Torrent</a></li>
+              <li><a href="#" download="">Скачать через зеркало 1</a></li>
+              <li><a href="#" download="">Скачать через зеркало 2</a></li>
+            </ul>
+          </div>
+          <div class="download-game__rigth">
+            <h4 class="download-game__rigth-title">Клиент игры</h4>
+            <p class="download-game__rigth-text">
+              Если у вас нет клиента игры - скачайте и установите его. Здесь
+              преставлена последняя версия игрового клиента.
+            </p>
+            <ul class="download__list">
+              <li><a href="#" download="">Скачать лаунчер</a></li>
+              <li><a href="#" download="">Скачать через зеркало 1</a></li>
+              <li><a href="#" download="">Скачать через зеркало 2</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="./js/profile.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/popup.js"></script>
+    <script src="./js/sliderServer.js"></script>
+  </body>
+</html>

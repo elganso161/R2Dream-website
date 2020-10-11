@@ -1,0 +1,118 @@
+.button {
+  width: 920px;
+  margin: 0 auto;
+  margin-bottom: 49px;
+}
+
+.button__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button__list,
+.button__link {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  opacity: 1;
+
+  :hover {
+    box-shadow: 0px 4px 26px rgba(224, 211, 211, 0.15);
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+}
+
+.download {
+  width: 290px;
+  height: 76px;
+  background: #e46916;
+  border-radius: 8px;
+  text-align: center;
+  padding-top: 28px;
+  padding-left: 8px;
+  position: relative;
+}
+
+.download::before {
+  position: absolute;
+  content: "";
+  top: 25px;
+  left: 68px;
+  z-index: 1;
+  background-image: url(../img/download-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 22px;
+  height: 22px;
+}
+
+.creat {
+  width: 290px;
+  height: 76px;
+  background: #1e50a0;
+  border-radius: 8px;
+  text-align: center;
+  padding-top: 28px;
+  padding-left: 8px;
+  position: relative;
+}
+
+.creat::before {
+  position: absolute;
+  content: "";
+  top: 24px;
+  left: 53px;
+  z-index: 1;
+  background-image: url(../img/add-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 22px;
+  height: 22px;
+}
+
+.donate {
+  width: 290px;
+  height: 76px;
+  background: #1e50a0;
+  border-radius: 15px;
+  text-align: center;
+  padding-top: 28px;
+  padding-left: 8px;
+  position: relative;
+}
+
+.donate::before {
+  position: absolute;
+  content: "";
+  top: 27px;
+  left: 55px;
+  z-index: 1;
+  background-image: url(../img/donat-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 22px;
+  height: 22px;
+}
+
+// @media (max-width: 920px) {
+//   .button__list {
+//     display: block;
+//   }
+
+//   .download,
+//   .creat,
+//   .donate {
+//     margin: 10px auto;
+//   }
+// }

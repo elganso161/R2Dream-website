@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <link
+      href="//db.onlinewebfonts.com/c/12420e8c141ca7c3dff41de2d59df13e?family=BeaufortforLOL-Bold"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="js/google-translate.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+    <title>R2Dreams-website</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__block">
+          <div class="header__logo">
+            <img
+              class="header__logo-img"
+              src="./img/R2Dream-logo.png"
+              alt="Логотип"
+            />
+          </div>
+          <div class="navigation__lang lang notranslate">
+            <div class="lang__link lang__link_select" data-lang-active>
+              <img
+                class="lang__img lang__img_select"
+                src="./img/lang__ru.png"
+                alt="Ru"
+              />
+              <div class="lang__arrow"></div>
+            </div>
+            <div class="lang__list" data-lang-list>
+              <a
+                href="javascript:void(0)"
+                data-google-lang="ru"
+                class="lang__link lang__link_sub lang__link_translate"
+              >
+                <img class="lang__img" src="img/lang__ru.png" alt="Ru" />
+              </a>
+              <a
+                href="javascript:void(0)"
+                data-google-lang="en"
+                class="lang__link lang__link_sub lang__link_translate"
+              >
+                <img class="lang__img" src="img/lang__en.png" alt="En" />
+              </a>
+              <a
+                href="javascript:void(0)"
+                data-google-lang="zh-CN"
+                class="lang__link lang__link_sub lang__link_translate"
+              >
+                <img class="lang__img" src="img/lang__ch.png" alt="Zh" />
+              </a>
+            </div>
+          </div>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="./index.html">Главная</a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="#">Скачать игру</a>
+              </li>
+              <li class="nav__list-item">
+                <a
+                  class="nav__list-link nav__link-active"
+                  href="./registration.html"
+                  >Регистрация</a
+                >
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="#">Форум</a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="./statistics.html"
+                  >Статистика</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="profile">
+            <ul class="profile__list">
+              <li class="profile__list-item">
+                <p onclick="openProfile()">Профиль</p>
+                <ul class="sub-profile__list">
+                  <li class="sub-profile__list-item">
+                    Добро пожаловать, <span>Test</span>!
+                  </li>
+                  <li class="sub-profile__list-item">
+                    <a href="#">
+                      Личный кабинет (скоро) <span> &#8594; </span></a
+                    >
+                  </li>
+                  <li class="sub-profile__list-item">
+                    <a href="#">Пополнить баланс <span> &#8594; </span></a>
+                  </li>
+                  <li class="sub-profile__list-item" onclick="openPopUp()">
+                    <a href="#">Войти <span> &#8594; </span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+            <!-- modile -->
+      <div class="mobile-menu">
+    <input type="checkbox" id="checkbox" class="mobile-menu__checkbox">
+    <label for="checkbox" class="mobile-menu__btn"><div class="mobile-menu__icon"></div></label>
+    <div class="mobile-menu__container">
+    <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link">Главная</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Скачать игру</a></li>
+        <li class="mobile-menu__item"><a href="./registration.html" class="mobile-menu__link">Регистрация</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Форум</a></li>
+        <li class="mobile-menu__item"><a href="./statistics.html" class="mobile-menu__link">Статистика</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Профиль</a></li>
+    </ul>
+    </div>
+</div>
+      <!-- end__mobile -->
+    </header>
+    <section class="section-registration">
+      <div class="container">
+        <form class="registration-form" action="" method="POST">
+          <h3 class="registration__title">Регистрация аккаунта</h3>
+          <div class="user__mail">
+            <label for="mail">E-Mail</label>
+            <input
+              type="email"
+              id="mail"
+              name="user_mail"
+              placeholder="Укажите ваш E Mail"
+            />
+          </div>
+          <div class="user__password">
+            <label for="password">Пароль</label>
+            <input
+              type="password"
+              id="password"
+              name="user_password"
+              placeholder="Введите 12-и значный пароль"
+            />
+          </div>
+          <div class="user__password-repeat">
+            <label for="password-repeat">Повторите пароль</label>
+            <input
+              type="password"
+              id="password-repeat"
+              name="user_password"
+              placeholder="Повторите пароль"
+            />
+          </div>
+          <div class="user__captcha">
+            <label for="captcha">Введите капчу</label>
+            <input type="text" id="captcha" />
+            <img
+              class="user__captcha-img"
+              src="./img/captcha.png"
+              alt="captcha"
+            />
+          </div>
+          <div class="user__checkbox">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox"
+              >Я согласен с правилами <span>проекта</span></label
+            >
+          </div>
+          <button class="user__button" type="submit">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-flex">
+          <div class="footer__social">
+            <img src="./img/footer-logo.png" alt="Логотип" />
+            <ul class="footer__social-list">
+              <li>
+                <a
+                  class="footer__social-list-item footer-discord"
+                  href="#"
+                  target="blank"
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="footer__social-list-item footer-vk"
+                  href="#"
+                  target="blank"
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="footer__social-list-item footer-facebook"
+                  href="#"
+                  target="blank"
+                  href="#"
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="footer__social-list-item footer-instagram"
+                  href="#"
+                  target="blank"
+                  href="#"
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__description">
+            <ul class="footer__description-list">
+              <li><p>О проекте</p></li>
+              <li class="footer__description-list-item">
+                <a href="#">Описание х35</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Описание х5</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Файлы</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Регистрация</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__info">
+            <ul class="footer__info-list">
+              <li><p>Информация</p></li>
+              <li class="footer__description-list-item">
+                <a href="#">Личный кабинет</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Форум</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Статистика</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Пожертвование</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__help">
+            <ul class="footer__help-list">
+              <li><p>Полезное</p></li>
+              <li class="footer__description-list-item">
+                <a href="#">Поддержка</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Новости</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Как подключится</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__block">
+            <ul class="footer__block-list">
+              <li>
+                <a href="#" target="blank"
+                  ><img src="http://placehold.it/88x31" alt="img"
+                /></a>
+              </li>
+              <li>
+                <a href="#" target="blank"
+                  ><img src="http://placehold.it/88x31" alt="img"
+                /></a>
+              </li>
+              <li>
+                <a href="#" target="blank"
+                  ><img src="http://placehold.it/88x31" alt="img"
+                /></a>
+              </li>
+              <li>
+                <a href="#" target="blank"
+                  ><img src="http://placehold.it/88x31" alt="img"
+                /></a>
+              </li>
+              <li><a class="upnova" href="#" target="blank">Designed by</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-bottom">
+          © R2Dream 2020 Данный сервер является тестовым вариантом игры и
+          предназначен только для ознакомления игроков.
+        </p>
+      </div>
+    </footer>
+
+    <!-- POPUP -->
+    <div class="authorization-popup">
+      <div class="container">
+        <form class="registration-form" action="" method="POST">
+          <div class="registration">
+            <h3 class="registration__title">Авторизация на сайте</h3>
+            <img
+              class="close-popup"
+              src="./img/close.png"
+              alt="close"
+              onclick="closePopup()"
+            />
+          </div>
+          <div class="user__mail">
+            <label for="mail">E-Mail</label>
+            <input
+              type="email"
+              id="mail"
+              name="user_mail"
+              placeholder="Укажите ваш E Mail"
+            />
+          </div>
+          <div class="user__password">
+            <label for="password">Пароль</label>
+            <input
+              type="password"
+              id="password"
+              name="user_password"
+              placeholder="Введите 12-и значный пароль"
+            />
+          </div>
+
+          <div class="user__captcha">
+            <label for="captcha">Введите капчу</label>
+            <input type="text" id="captcha" />
+            <img
+              class="user__captcha-img"
+              src="./img/captcha.png"
+              alt="captcha"
+            />
+          </div>
+          <div class="popup-button">
+            <button class="popup-user__button" type="submit">Войти</button>
+            <a href="#">Забыли пароль?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./js/profile.js"></script>
+    <script src="./js/popup.js"></script>
+    <script src="./js/sliderServer.js"></script>
+  </body>
+</html>

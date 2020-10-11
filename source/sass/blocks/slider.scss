@@ -1,0 +1,155 @@
+.section-slider {
+  position: relative;
+}
+
+.section-slider::before {
+  position: absolute;
+  content: "";
+  top: -125px;
+  left: 0;
+  z-index: -1;
+  background-image: url(../img/bg-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 902px;
+  min-width: 920px;
+}
+
+
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 10px;
+  width: 922px;
+  height: 350px;
+}
+
+
+.slider__list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+.slider__list-item {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 922px;
+  height: 350px;
+
+}
+
+.slider-1 {
+  background-image: url(../img/slider-img-1.jpg);
+  background-size: 922px 350px;
+}
+
+.slider-2 {
+  background-image: url(../img/slider-img-1.jpg);
+  background-size: 922px 350px;
+}
+
+a.control_prev,
+a.control_next {
+  position: absolute;
+  top: 35%;
+  z-index: 1;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+a.control_prev:hover,
+a.control_next:hover {
+  opacity: 1;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+  background: #438bff;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+  background: #438bff;
+}
+
+.slider__suptitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+  padding-top: 79px;
+  padding-left: 69px;
+}
+
+.slider__title {
+  font-family: BeaufortforLOL-Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 46px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  width: 350px;
+  margin: 0;
+  padding-left: 69px;
+}
+
+.slider__title span {
+  color: yellow;
+}
+
+.slider__subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  margin-bottom: 70px;
+  padding-left: 69px;
+}
+
+.slider__list-item a {
+  text-decoration: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #BBE2FF;
+  padding-left: 69px;
+}
+
+// @media(max-width:920px) {
+//   .slider {
+//     display: none;
+//   }
+// }

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <link
+      href="//db.onlinewebfonts.com/c/12420e8c141ca7c3dff41de2d59df13e?family=BeaufortforLOL-Bold"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="js/google-translate.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+    <title>R2Dreams-website</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__block">
+          <div class="header__logo">
+            <img
+              class="header__logo-img"
+              src="./img/R2Dream-logo.png"
+              alt="Логотип"
+            />
+          </div>
+          <div class="navigation__lang lang notranslate">
+            <div class="lang__link lang__link_select" data-lang-active>
+              <img
+                class="lang__img lang__img_select"
+                src="./img/lang__ru.png"
+                alt="Ru"
+              />
+              <div class="lang__arrow"></div>
+            </div>
+            <div class="lang__list" data-lang-list>
+              <a
+                href="javascript:void(0)"
+                data-google-lang="ru"
+                class="lang__link lang__link_sub lang__link_translate"
+              >
+                <img class="lang__img" src="img/lang__ru.png" alt="Ru" />
+              </a>
+              <a
+                href="javascript:void(0)"
+                data-google-lang="en"
+                class="lang__link lang__link_sub lang__link_translate"
+              >
+                <img class="lang__img" src="img/lang__en.png" alt="En" />
+              </a>
+              <a
+                href="javascript:void(0)"
+                data-google-lang="zh-CN"
+                class="lang__link lang__link_sub lang__link_translate"
+              >
+                <img class="lang__img" src="img/lang__ch.png" alt="Zh" />
+              </a>
+            </div>
+          </div>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="./index.html">Главная</a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="#">Скачать игру</a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="./registration.html"
+                  >Регистрация</a
+                >
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="#">Форум</a>
+              </li>
+              <li class="nav__list-item">
+                <a
+                  class="nav__list-link nav__link-active"
+                  href="./statistics.html"
+                  >Статистика</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="profile">
+            <ul class="profile__list">
+              <li tabindex="0" class="profile__list-item">
+                <p onclick="openProfile()">Профиль</p>
+                <ul class="sub-profile__list">
+                  <li class="sub-profile__list-item">
+                    Добро пожаловать, <span>Test</span>!
+                  </li>
+                  <li class="sub-profile__list-item">
+                    <a href="#">
+                      Личный кабинет (скоро) <span> &#8594; </span></a
+                    >
+                  </li>
+                  <li class="sub-profile__list-item">
+                    <a href="#">Пополнить баланс <span> &#8594; </span></a>
+                  </li>
+                  <li class="sub-profile__list-item" onclick="openPopUp()">
+                    <a href="#">Войти <span> &#8594; </span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+            <!-- modile -->
+      <div class="mobile-menu">
+    <input type="checkbox" id="checkbox" class="mobile-menu__checkbox">
+    <label for="checkbox" class="mobile-menu__btn"><div class="mobile-menu__icon"></div></label>
+    <div class="mobile-menu__container">
+    <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link">Главная</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Скачать игру</a></li>
+        <li class="mobile-menu__item"><a href="./registration.html" class="mobile-menu__link">Регистрация</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Форум</a></li>
+        <li class="mobile-menu__item"><a href="./statistics.html" class="mobile-menu__link">Статистика</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Профиль</a></li>
+    </ul>
+    </div>
+</div>
+      <!-- end__mobile -->
+    </header>
+    <section class="section-statistic">
+      <div class="page__section stats page__stats">
+        <div class="container stats__container">
+          <h3 class="statistic__title">РЕЙТИНГОВАЯ ТАБЛИЦА PVP</h3>
+          <p class="statistic__subtitle">Здесь представлены лучшие игроки наших серверов. Чтобы сюда попасть необходимо набирать как можно больше побед на аренах, полях боя и т.д.</p>
+          <div class="page__inner page__inner_rw stats__inner">
+            <div class="stats__choice choice">
+              <a href="#" class="choice__item choice__item_active">Арена 2Х2</a>
+              <a href="#" class="choice__item">Арена 3Х3</a>
+              <a href="#" class="choice__item">Поля боя 10Х10</a>
+            </div>
+            <div class="table">
+              <div class="header__table-row table__row_head">
+                <div class="table__col table__col_head table__rank">
+                  <div class="table__content">
+                    <!-- Сортировка по умолчанию data-sort="asc", можно не писать -->
+                    <!-- Но если в обратном направлении то пишем data-sort="desc" -->
+                    <a href="#" class="sort header__table" data-sort="asc">Ранг</a>
+                    <!-- <a href="#" class="sort" data-sort="desc">Ранг</a> -->
+                  </div>
+                </div>
+                <div class="table__col table__col_head table__rating">
+                  <div class="table__content header__table">Рейтинг</div>
+                </div>
+                <div class="table__col table__col_head table__player">
+                  <div class="table__content header__table">Игрок</div>
+                </div>
+                <div class="table__col table__col_head table__class">
+                  <div class="table__content header__table">Класс</div>
+                </div>
+                <div class="table__col table__col_head table__world">
+                  <div class="table__content header__table">Игровой мир</div>
+                </div>
+                <div class="table__col table__col_head table__victories">
+                  <div class="table__content header__table">Победы</div>
+                </div>
+                <div class="table__col table__col_head table__defeats">
+                  <div class="table__content header__table">Смерти</div>
+                </div>
+              </div>
+              <!-- END  table__row -->
+            </div>
+            <!-- END  table -->
+            <div class="table">
+              <div class="table__row">
+                <div class="table__col table__rank">
+                  <div class="table__content">1</div>
+                </div>
+                <div class="table__col table__rating">
+                  <div class="table__content">3029</div>
+                </div>
+                <div class="table__col table__player">
+                  <div class="table__content">Test</div>
+                </div>
+                <div class="table__col table__class">
+                  <div class="table__content">
+                    <p>Рыцарь</p>
+                  </div>
+                </div>
+                <div class="table__col table__world">
+                  <div class="table__content">Deram x30</div>
+                </div>
+                <div class="table__col table__victories">
+                  <div class="table__content">537</div>
+                </div>
+                <div class="table__col table__defeats">
+                  <div class="table__content">205</div>
+                </div>
+              </div>
+              <!-- END  table__row -->
+              <div class="table__row">
+                <div class="table__col table__rank">
+                  <div class="table__content">2</div>
+                </div>
+                <div class="table__col table__rating">
+                  <div class="table__content">3022</div>
+                </div>
+                <div class="table__col table__player">
+                  <div class="table__content">Test</div>
+                </div>
+                <div class="table__col table__class">
+                  <div class="table__content">
+                    <p>Рыцарь</p>
+                  </div>
+                </div>
+                <div class="table__col table__world">
+                  <div class="table__content">Deram x30</div>
+                </div>
+                <div class="table__col table__victories">
+                  <div class="table__content">495</div>
+                </div>
+                <div class="table__col table__defeats">
+                  <div class="table__content">198</div>
+                </div>
+              </div>
+              <!-- END  table__row -->
+              <div class="table__row">
+                <div class="table__col table__rank">
+                  <div class="table__content">3</div>
+                </div>
+                <div class="table__col table__rating">
+                  <div class="table__content">2945</div>
+                </div>
+                <div class="table__col table__player">
+                  <div class="table__content">Test</div>
+                </div>
+                <div class="table__col table__class">
+                  <div class="table__content">
+                    <p>Рыцарь</p>
+                  </div>
+                </div>
+                <div class="table__col table__world">
+                  <div class="table__content">Deram x30</div>
+                </div>
+                <div class="table__col table__victories">
+                  <div class="table__content">487</div>
+                </div>
+                <div class="table__col table__defeats">
+                  <div class="table__content">165</div>
+                </div>
+              </div>
+              <!-- END  table__row -->
+              <div class="table__row">
+                <div class="table__col table__rank">
+                  <div class="table__content">4</div>
+                </div>
+                <div class="table__col table__rating">
+                  <div class="table__content">2743</div>
+                </div>
+                <div class="table__col table__player">
+                  <div class="table__content">Test</div>
+                </div>
+                <div class="table__col table__class">
+                  <div class="table__content">
+                    <p>Рыцарь</p>
+                  </div>
+                </div>
+                <div class="table__col table__world">
+                  <div class="table__content">Deram x30</div>
+                </div>
+                <div class="table__col table__victories">
+                  <div class="table__content">362</div>
+                </div>
+                <div class="table__col table__defeats">
+                  <div class="table__content">265</div>
+                </div>
+              </div>
+              <!-- END  table__row -->
+              <div class="table__row">
+                <div class="table__col table__rank">
+                  <div class="table__content">5</div>
+                </div>
+                <div class="table__col table__rating">
+                  <div class="table__content">2354</div>
+                </div>
+                <div class="table__col table__player">
+                  <div class="table__content">Test</div>
+                </div>
+                <div class="table__col table__class">
+                  <div class="table__content">
+                    <p>Рыцарь</p>
+                  </div>
+                </div>
+                <div class="table__col table__world">
+                  <div class="table__content">Deram x30</div>
+                </div>
+                <div class="table__col table__victories">
+                  <div class="table__content">543</div>
+                </div>
+                <div class="table__col table__defeats">
+                  <div class="table__content">654</div>
+                </div>
+              </div>
+              <!-- END  table__row -->
+              <div class="table__row">
+                <div class="table__col table__rank">
+                  <div class="table__content">6</div>
+                </div>
+                <div class="table__col table__rating">
+                  <div class="table__content">1354</div>
+                </div>
+                <div class="table__col table__player">
+                  <div class="table__content">Test</div>
+                </div>
+                <div class="table__col table__class">
+                  <div class="table__content">
+                    <p>Рыцарь</p>
+                  </div>
+                </div>
+                <div class="table__col table__world">
+                  <div class="table__content">Deram x30</div>
+                </div>
+                <div class="table__col table__victories">
+                  <div class="table__content">543</div>
+                </div>
+                <div class="table__col table__defeats">
+                  <div class="table__content">654</div>
+                </div>
+              </div>
+              <!-- END  table__row -->
+              <div class="table__row">
+                <div class="table__col table__rank">
+                  <div class="table__content">7</div>
+                </div>
+                <div class="table__col table__rating">
+                  <div class="table__content">2354</div>
+                </div>
+                <div class="table__col table__player">
+                  <div class="table__content">Test</div>
+                </div>
+                <div class="table__col table__class">
+                  <div class="table__content">
+                    <p>Рыцарь</p>
+                  </div>
+                </div>
+                <div class="table__col table__world">
+                  <div class="table__content">Deram x30</div>
+                </div>
+                <div class="table__col table__victories">
+                  <div class="table__content">543</div>
+                </div>
+                <div class="table__col table__defeats">
+                  <div class="table__content">654</div>
+                </div>
+              </div>
+              <!-- END  table__row -->
+              <div class="table__row">
+                <div class="table__col table__rank">
+                  <div class="table__content">8</div>
+                </div>
+                <div class="table__col table__rating">
+                  <div class="table__content">1354</div>
+                </div>
+                <div class="table__col table__player">
+                  <div class="table__content">Test</div>
+                </div>
+                <div class="table__col table__class">
+                  <div class="table__content">
+                    <p>Рыцарь</p>
+                  </div>
+                </div>
+                <div class="table__col table__world">
+                  <div class="table__content">Deram x30</div>
+                </div>
+                <div class="table__col table__victories">
+                  <div class="table__content">543</div>
+                </div>
+                <div class="table__col table__defeats">
+                  <div class="table__content">654</div>
+                </div>
+              </div>
+              <!-- END  table__row -->
+              <div class="table__row">
+                <div class="table__col table__rank">
+                  <div class="table__content">9</div>
+                </div>
+                <div class="table__col table__rating">
+                  <div class="table__content">2354</div>
+                </div>
+                <div class="table__col table__player">
+                  <div class="table__content">Test</div>
+                </div>
+                <div class="table__col table__class">
+                  <div class="table__content">
+                    <p>Рыцарь</p>
+                  </div>
+                </div>
+                <div class="table__col table__world">
+                  <div class="table__content">Deram x30</div>
+                </div>
+                <div class="table__col table__victories">
+                  <div class="table__content">543</div>
+                </div>
+                <div class="table__col table__defeats">
+                  <div class="table__content">654</div>
+                </div>
+              </div>
+              <!-- END  table__row -->
+              <div class="table__row">
+                <div class="table__col table__rank">
+                  <div class="table__content">10</div>
+                </div>
+                <div class="table__col table__rating">
+                  <div class="table__content">2354</div>
+                </div>
+                <div class="table__col table__player">
+                  <div class="table__content">Test</div>
+                </div>
+                <div class="table__col table__class">
+                  <div class="table__content">
+                    <p>Рыцарь</p>
+                  </div>
+                </div>
+                <div class="table__col table__world">
+                  <div class="table__content">Deram x30</div>
+                </div>
+                <div class="table__col table__victories">
+                  <div class="table__content">543</div>
+                </div>
+                <div class="table__col table__defeats">
+                  <div class="table__content">654</div>
+                </div>
+              </div>
+              <!-- END  table__row -->
+            </div>
+            <!-- END  table -->
+            <div class="stats__pagination pagination pagination_m_t">
+              <div class="pagination__container pagination__container_left">
+                <a
+                  class="pagination__link pagination__link_box pagination__link_prev"
+                  href="#"
+                  >Назад</a
+                >
+              </div>
+              <div class="pagination__container pagination__container_center">
+                <a href="#" class="pagination__link pagination__link_num">1</a>
+                <a
+                  href="#"
+                  class="pagination__link pagination__link_num pagination__link_active"
+                >
+                  2
+                </a>
+                <a href="#" class="pagination__link pagination__link_num">3</a>
+                <a
+                  href="#"
+                  class="pagination__link pagination__link_num pagination__link_dots"
+                  ><span>...</span>
+                </a>
+                <a href="#" class="pagination__link pagination__link_num"
+                  >128</a
+                >
+              </div>
+              <div class="pagination__container pagination__container_right">
+                <a
+                  class="pagination__link pagination__link_box pagination__link_next"
+                  href="#"
+                  >Дальше</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- END  page__inner -->
+        </div>
+        <!-- END  page__container -->
+      </div>
+      <!-- END  page__section -->
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-flex">
+          <div class="footer__social">
+            <img src="./img/footer-logo.png" alt="Логотип" />
+            <ul class="footer__social-list">
+              <li>
+                <a
+                  class="footer__social-list-item footer-discord"
+                  href="#"
+                  target="blank"
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="footer__social-list-item footer-vk"
+                  href="#"
+                  target="blank"
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="footer__social-list-item footer-facebook"
+                  href="#"
+                  target="blank"
+                  href="#"
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="footer__social-list-item footer-instagram"
+                  href="#"
+                  target="blank"
+                  href="#"
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__description">
+            <ul class="footer__description-list">
+              <li><p>О проекте</p></li>
+              <li class="footer__description-list-item">
+                <a href="#">Описание х35</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Описание х5</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Файлы</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Регистрация</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__info">
+            <ul class="footer__info-list">
+              <li><p>Информация</p></li>
+              <li class="footer__description-list-item">
+                <a href="#">Личный кабинет</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Форум</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Статистика</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Пожертвование</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__help">
+            <ul class="footer__help-list">
+              <li><p>Полезное</p></li>
+              <li class="footer__description-list-item">
+                <a href="#">Поддержка</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Новости</a>
+              </li>
+              <li class="footer__description-list-item">
+                <a href="#">Как подключится</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__block">
+            <ul class="footer__block-list">
+              <li>
+                <a href="#" target="blank"
+                  ><img src="http://placehold.it/88x31" alt="img"
+                /></a>
+              </li>
+              <li>
+                <a href="#" target="blank"
+                  ><img src="http://placehold.it/88x31" alt="img"
+                /></a>
+              </li>
+              <li>
+                <a href="#" target="blank"
+                  ><img src="http://placehold.it/88x31" alt="img"
+                /></a>
+              </li>
+              <li>
+                <a href="#" target="blank"
+                  ><img src="http://placehold.it/88x31" alt="img"
+                /></a>
+              </li>
+              <li><a class="upnova" href="#" target="blank">Designed by</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-bottom">
+          © R2Dream 2020 Данный сервер является тестовым вариантом игры и
+          предназначен только для ознакомления игроков.
+        </p>
+      </div>
+    </footer>
+
+    <!-- POPUP -->
+    <div class="authorization-popup">
+      <div class="container">
+        <form class="registration-form" action="" method="POST">
+          <div class="registration">
+            <h3 class="registration__title">Авторизация на сайте</h3>
+            <img
+              class="close-popup"
+              src="./img/close.png"
+              alt="close"
+              onclick="closePopup()"
+            />
+          </div>
+          <div class="user__mail">
+            <label for="mail">E-Mail</label>
+            <input
+              type="email"
+              id="mail"
+              name="user_mail"
+              placeholder="Укажите ваш E Mail"
+            />
+          </div>
+          <div class="user__password">
+            <label for="password">Пароль</label>
+            <input
+              type="password"
+              id="password"
+              name="user_password"
+              placeholder="Введите 12-и значный пароль"
+            />
+          </div>
+
+          <div class="user__captcha">
+            <label for="captcha">Введите капчу</label>
+            <input type="text" id="captcha" />
+            <img
+              class="user__captcha-img"
+              src="./img/captcha.png"
+              alt="captcha"
+            />
+          </div>
+          <div class="popup-button">
+            <button class="popup-user__button" type="submit">Войти</button>
+            <a href="#">Забыли пароль?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/profile.js"></script>
+    <script src="./js/popup.js"></script>
+    <script src="./js/sliderServer.js"></script>
+  </body>
+</html>
